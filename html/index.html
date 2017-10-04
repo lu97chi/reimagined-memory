@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <title>Webinar</title>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col s12 m8">
+        <h1 class="center-align">Webinar</h1>
+        <video class="responsive-video" id="video" width="100%">
+          <source src="test.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="col m4 s12">
+        <div class="card">
+          <h1>
+            Comentarios
+          </h1>
+          <div class="comments scroll">
+            <ul class="collapsible popout hideThis" data-collapsible="accordion" id="comment1">
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 4
+               </div>
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span><br>
+                <span>aqui va la respuesta </span>
+              </div>
+            </li>
+            <ul class="collapsible popout hideThis" data-collapsible="accordion" id="comment2">
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 3
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <ul class="collapsible popout hideThis" data-collapsible="accordion" id="comment3">
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 2
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <ul class="collapsible popout hideThis" data-collapsible="accordion" id="comment4">
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 1
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 1
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 1
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header animated fadeInLeft">
+                <div class="chip">
+                   <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+                 Jane Doe 1
+               </div>
+              </div>
+              <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            </li>
+          </ul>
+          </div>
+          <!-- <div class="comment">
+            <div class="card-panel">
+              <div class="chip">
+                 <img src="http://millennialmagazine.com/wp-content/uploads/2014/07/Jeremy_Davis_paramore.jpg" alt="Contact Person">
+               Jane Doe
+             </div>
+             <br>
+              <span class="black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, corporis!
+              </span>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="col m12 s12">
+        <div class="row">
+          <div class="col s12 m12" id="registerContainer">
+            <h4>Registrate para comentar</h4>
+            <div class="input-field col s6">
+            <input placeholder="Nombre de usuario" id="name" type="text" class="validate">
+            <label for="name">Nombre de usuario</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate" placeholder="Email">
+            <label for="email">Email</label>
+          </div>
+          <button class="btn waves-effect waves-light" type="button" name="action" id="register" disabled="disabled">Registrar
+                <i class="material-icons right">send</i>
+          </button>
+          <div class="progress hideThis" id="registerLoading">
+             <div class="indeterminate"></div>
+          </div>
+          </div>
+        <div class="col s12 m12">
+          <div class="input-field col s12 hideThis" id="commentContainer">
+            <textarea id="textarea" class="materialize-textarea"></textarea>
+            <button class="btn waves-effect waves-light" type="button" name="action" id="send">Comentar
+                  <i class="material-icons right">send</i>
+            </button>
+            <label for="textarea1">Deja tu comentario</label>
+            <div class="progress hideThis" id="sendingLoading">
+               <div class="indeterminate"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>
